@@ -27,9 +27,9 @@ load_dotenv(Path(__file__).parent.parent.joinpath(".env"))
 SECRET_KEY =os.environ["SC_KEY"]# set your api_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
