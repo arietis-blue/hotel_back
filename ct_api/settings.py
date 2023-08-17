@@ -70,10 +70,6 @@ CORS_ALLOWED_ORIGINS = [
     'https://restaurantfront-a94054c84e78.herokuapp.com',
 ]
 
-CORS_ORIGIN_WHITELIST = ( 
-    'http://localhost:3000', 
-    'http://192.168.2.105:3000',
-)
 
 ROOT_URLCONF = 'ct_api.urls'
 
