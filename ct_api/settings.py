@@ -66,11 +66,13 @@ MIDDLEWARE = [
 ]
 
 
-CORS_ALLOWED_ORIGINS = [
-    'https://restaurantfront-a94054c84e78.herokuapp.com',
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'https://restaurantfront-a94054c84e78.herokuapp.com',
+# ]
 
-CORS_ORIGIN_ALLOW_ALL = False
+# CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = []
 
 
 ROOT_URLCONF = 'ct_api.urls'
