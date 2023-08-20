@@ -12,16 +12,30 @@ API_KEY =os.environ["HP_API"]# set your api_key
 URL = 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/'
 
 @shared_task
-def res(lat,lng):
+def res(lat,lng, range, budget, genre, otheroptions):
     body = {
         'key':API_KEY,
         'lng':lng,
         'lat':lat, 
-        'range':1,
+        'range':range,
         'count':10,
         'order':4,
         'format':'json',
+        'free_drink':otheroptions["飲み放題"],
+        'free_food':otheroptions["食べ放題"],
+        'private_room':otheroptions["個室"],
+        'sake':otheroptions["日本酒"],
+        'wine':otheroptions["ワイン"],
+        'card':otheroptions["カード"],
+        'parking':otheroptions["駐車場"],
+        'pet':otheroptions["ペット"]
     }
+
+    if not budget == "":
+        body['budget'] = budget
+    if not genre == "":
+        body['genre'] = genre
+
     resta = requests.get(URL,body)
     # // 取得したデータからJSONデータを取得
     datum = resta.json()
