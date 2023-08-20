@@ -40,6 +40,7 @@ def res(lat,lng, range, budget, genre, otheroptions):
     # // 取得したデータからJSONデータを取得
     datum = resta.json()
     # // JSONデータの中からお店のデータを取得
+    print(datum)
     stores = datum['results']['shop']
     # // お店のデータの中から、店名を抜き出して表示させる
     store_list=[]
