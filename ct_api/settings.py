@@ -27,9 +27,11 @@ load_dotenv(Path(__file__).parent.parent.joinpath(".env"))
 SECRET_KEY =os.environ["SC_KEY"]# set your api_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True
 DEBUG = False
 
 ALLOWED_HOSTS = ["restaurantback-0509c72586a3.herokuapp.com"]
+# ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -73,8 +75,10 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'https://restaurantfront-a94054c84e78.herokuapp.com',
 ]
-
 CORS_ORIGIN_ALLOW_ALL = False
+
+# CORS_ALLOWED_ORIGINS = []
+# CORS_ORIGIN_ALLOW_ALL = True
 
 
 ROOT_URLCONF = 'ct_api.urls'
