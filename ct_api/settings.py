@@ -66,13 +66,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     'https://restaurantfront-a94054c84e78.herokuapp.com',
-# ]
 CORS_ALLOWED_ORIGINS = [
-    'https://restaurantfront-a94054c84e78.herokuapp.com',
-    'http://localhost:3000', 
-    'http://192.168.2.105:3000',
     'https://restaurantfront-a94054c84e78.herokuapp.com',
 ]
 
