@@ -29,7 +29,7 @@ SECRET_KEY =os.environ["SC_KEY"]# set your api_key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["restaurantback-0509c72586a3.herokuapp.com"]
 
 
 # Application definition
@@ -73,6 +73,7 @@ CORS_ALLOWED_ORIGINS = [
     'https://restaurantfront-a94054c84e78.herokuapp.com',
     'http://localhost:3000', 
     'http://192.168.2.105:3000',
+    'https://restaurantfront-a94054c84e78.herokuapp.com',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = False
