@@ -27,8 +27,8 @@ load_dotenv(Path(__file__).parent.parent.joinpath(".env"))
 SECRET_KEY =os.environ["SC_KEY"]# set your api_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
+DEBUG = False
 # 
 ALLOWED_HOSTS = ["restaurantback-0509c72586a3.herokuapp.com"]
 # ALLOWED_HOSTS = ["*"]
@@ -156,7 +156,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CELERY_BROKER_URL = 'redis://localhost:6379/1'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/1'
+REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/1')
+
+CELERY_BROKER_URL = REDIS_URL
+CELERY_RESULT_BACKEND = REDIS_URL
 
 CELERY_TASK_TRACK_STARTED = True 
