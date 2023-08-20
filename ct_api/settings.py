@@ -156,7 +156,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/1')
+REDIS_URL = os.environ.get('REDIS_URL')
+
+# CELERY_BROKER_URL = 'redis://localhost:6379/1'
+# CELERY_RESULT_BACKEND = 'redis://localhost:6379/1'
 
 CELERY_BROKER_URL = REDIS_URL
 CELERY_RESULT_BACKEND = REDIS_URL
